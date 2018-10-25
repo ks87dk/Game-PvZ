@@ -1,3 +1,5 @@
+import java.util.Random;
+
 public class Game {
     // Initialize modstandere
     Plant plante = new Plant();
@@ -5,7 +7,9 @@ public class Game {
 
 
     public void start(){
-        boolean zombieHit = true;
+        Random random = new Random();
+
+        boolean zombieHit = random.nextBoolean(); // Random boolean
 
         while(zombie.getHealth() != 0 || plante.getHealth() != 0){
             if (zombieHit){
