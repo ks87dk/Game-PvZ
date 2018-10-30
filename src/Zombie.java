@@ -13,15 +13,18 @@ public class Zombie {
     }
 
     public void takeDamage(){
-        int randomDamage = 5 + (int)(Math.random() * ((10 - 5) + 1));
+        int randomDamage = (int)(Math.random() * ((15 - 10) + 1));
         if (this.health-randomDamage <= 0){
             this.health = 0;
             System.out.println("Plante vandt\nVICTORY");
             System.exit(0);
+
         }
         else {
+
             this.health -= randomDamage;
             System.out.println("Zombie blev angrebet og har nu " + this.health + " liv tilbage...");
+
         }
     }
 

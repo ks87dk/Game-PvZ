@@ -12,12 +12,14 @@ public class Game {
         boolean zombieHit = random.nextBoolean(); // Random boolean
 
         while(zombie.getHealth() != 0 || plante.getHealth() != 0){
+
             if (zombieHit){
                 zombie.attack(plante);
             }
             else{
                 plante.attack(zombie);
             }
+
             zombieHit = !zombieHit;
         }
 
